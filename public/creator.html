@@ -1,0 +1,111 @@
+<!-- This is a static file -->
+<!-- served from your routes in server.js -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Postcard App</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/reset.css">
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Homemade+Apple|Indie+Flower|Long+Cang&display=swap" rel="stylesheet">
+  </head>
+  
+  <body>
+    <header>
+      <h1>
+         Daily Postcard Creator
+      </h1>
+    </header>
+    
+
+
+    <main>
+      <div class="postcard">
+        <div class="image upload">
+          <img id="cardImg" alt="user uploaded img"/>
+
+ 
+          <form method="post" enctype="multipart/form-data">
+            <button class="btn">Choose Image</button>
+            <input id="imgUpload" type="file" accept="image/*" name="photo"/> 
+          </form>    
+        </div>
+
+
+        <div contenteditable="true" placeholder="Write your message here!" id="message" class="flower"></div> 
+      </div>
+      <div class="edit">
+        <div class="fonts">
+        <h3>
+          Choose your font
+        </h3>
+        <form id="fonts">
+          <label for="flower" class="flower">
+            <span>&#10070;</span>
+            Indie Flower
+            <input type="radio" id="flower" name="font" value="flower" checked="true">
+          </label>
+          <label for="script" class="script">
+            <span>&#11046;</span>
+            Dancing Script
+            <input type="radio" id="script" name="font" value="script">
+          </label>
+          <label for="cang" class="cang">
+            <span>&#11046;</span>
+            Long Cang
+            <input type="radio" id="cang" name="font" value="cang">
+          </label>
+          <label for="apple" class="apple">
+            <span>&#11046;</span>
+            Homemade Apple
+            <input type="radio" id="apple" name="font" value="apple">
+          </label>
+        </form>     
+        </div>
+        <div class="color-picker">
+          <h3>
+            Choose your color
+          </h3>
+          <div class="color">
+          <div class="color-box">
+          </div>
+          <div class="color-box">
+          </div>
+          <div class="color-box">
+          </div>
+          <div class="color-box">
+          </div>
+          <div class="color-box">
+          </div>
+          <div class="color-box">
+          </div>
+          <div class="color-box">
+          </div>
+          <div class="color-box">
+          </div>
+          <div class="color-box">
+          </div>        
+          </div>
+        </div>
+        <button class="btn" id="save">Share postcard</button>
+      </div>
+      
+      <div id = "overlay">
+        <span class="close">&times;</span>
+        <div id = "popup">
+          <div id = "shareText">Share your postcard:</div>
+          <a href="google.com" id="displayLink">google.com</a>
+        </div>
+      </div>
+      
+    </main>
+
+ 
+  
+    <script src="./script.js"></script>
+  
+  </body>
+</html>

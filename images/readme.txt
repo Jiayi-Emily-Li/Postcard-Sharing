@@ -1,0 +1,1 @@
+Images will go into this directory.
